@@ -1,0 +1,371 @@
+:root {
+  --cor-primaria: #181818;
+  --cor-secundaria: #0d1117;
+  --cor-tercearia: #58a5fee7;
+  --cor-logo: #3e5d6d;
+  --cor-logo-dark: #3e5d6d53;
+  --fonte: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--fonte);
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.repoLink{
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile {
+  margin-left: 50px;
+}
+
+.repo {
+  background-color: var(--cor-secundaria);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-top: 20px;
+  margin-right: 50px;
+  width: 350px;
+  max-height: 500px;
+}
+
+.repo h4 {
+  color: var(--cor-tercearia);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.repo h4 span {
+  color: var(--cor-logo-dark);
+}
+
+.repo h4 span:first-of-type {
+  color: var(--cor-tercearia);
+}
+
+.repo-list {
+  overflow: scroll;
+  max-height: 85%;
+}
+
+.repo-list a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.repo-list::-webkit-scrollbar {
+  display: none;
+}
+
+.repoItem {
+  border: 1px solid var(--cor-logo);
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 85%;
+  height: fit-content;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.repoItem:hover {
+  border-color: var(--cor-tercearia);
+  color: var(--cor-tercearia);
+}
+
+.repoName {
+  word-break: break-all;
+  margin: 0;
+  width: fit-content;
+  display: inline-block;
+}
+
+.repoItem article {
+  width: fit-content;
+  color: #ffffff9c;
+  text-align: end;
+  margin: 0;
+  display: inline-block;
+}
+
+.mainHeader {
+  background-color: var(--cor-secundaria);
+  width: 100%;
+  height: 75px;
+  padding: 20px;
+  margin-bottom: 50px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainHeader h1 {
+  height: 50px;
+}
+
+.mainHeader form {
+  margin-left: -15%;
+}
+
+.mainHeader input {
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid #ffffffbf;
+  padding: 2px 10px;
+  border-radius: 5px;
+  width: 225px;
+  height: 29px;
+}
+
+.mainHeader button {
+  border: none;
+  background: #2b414d;
+  margin-left: 2.5px;
+  height: 30px;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+}
+
+.mainHeader button:hover {
+  background: var(--cor-logo);
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  margin-top: -10px;
+}
+
+.profile-header {
+  border: 1px solid;
+  height: 325px;
+  width: 550px;
+  padding: 20px;
+  padding-top: 50px;
+  background-color: var(--cor-secundaria);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.profileMain {
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.profileData {
+  width: 40%;
+  font-size: 1em;
+  text-align: start;
+}
+
+.profileData h1 {
+  margin-bottom: 25px;
+  color: var(--cor-tercearia);
+}
+
+.profileData h1:hover {
+  color: #3e5d6d;
+}
+
+.profileData p {
+  margin-bottom: 25px;
+}
+
+.iconsHeader {
+  background-color: var(--cor-secundaria);
+  width: 100%;
+  height: fit-content;
+  border: 1px solid;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.iconsHeader img {
+  width: 35px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid;
+  border-color: var(--cor-tercearia);
+  margin-bottom: 5px;
+}
+
+.iconsHeader article p:first-of-type {
+  display: block;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.vercel {
+  margin-left: 20px;
+}
+
+.followerAvatar {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--cor-logo);
+  background-color: var(--cor-logo);
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.notFound {
+  margin: auto;
+}
+
+.notFound p {
+  width: 60%;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 40%;
+  color: var(--cor-tercearia);
+}
+
+.notFound img {
+  width: 25%;
+  position: relative;
+  left: 15%;
+}
+
+/* ===================================================================================================== */
+
+@media screen and (max-width: 1325px) {
+  .profile-header {
+    width: 450px;
+    padding: 15px;
+    padding-top: 40px;
+  }
+
+  .repo {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .profile-header {
+    width: 450px;
+    padding: 15px;
+    padding-top: 40px;
+  }
+
+  .vercel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile {
+    margin-left: 0;
+  }
+
+  .profile-header {
+    height: 150px;
+    width: 450px;
+    padding: 15px;
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .profile-header img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .profileData p {
+    display: none;
+  }
+
+  .repo {
+    width: 450px;
+    height: 250px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .repo-list {
+    max-height: 75%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile,
+  .repoItem,
+  .repo {
+    width: 80%;
+  }
+
+  .mainHeader h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .mainHeader input {
+    width: 100px;
+  }
+
+  .profileData h1 {
+    font-size: 1em;
+  }
+}
