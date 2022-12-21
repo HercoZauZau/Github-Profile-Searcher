@@ -5,7 +5,7 @@ export default class User {
 
   /**
    * Documentação oficial da API: https://docs.github.com/pt/rest?api
-  */
+   */
 
   async getUser() {
     try {
@@ -16,29 +16,28 @@ export default class User {
       const response = await fetch(apiUrl);
       const result = await response.json();
 
-      if (response.status >= 400 && response.status < 500) {
-        this.defined = false;
-      } else {
-        this.defined = true;
+      /**
+       * response.ok retorna true se a conexção com a API tiver êxito e false caso ocorra algum erro
+       */
+      this.defined = response.ok;
 
-        for (let key in result) {
-          result[key] = result[key] == null ? " - " : result[key];
-        }
-
-        this.name = result.name;
-        this.user_name = result.login;
-        this.location = result.location;
-        this.email = result.email;
-        this.bio = result.bio;
-        this.avatar_url = result.avatar_url;
-        this.followers = result.followers;
-        this.following = result.following;
-        this.public_repos = result.public_repos;
-        this.html_url = result.html_url;
-        this.repos_url = apiUrlRepos;
-        this.followers_url = apiUrlFollowers;
-        this.following_url = apiUrlFollowing;
+      for (let key in result) {
+        result[key] = result[key] == null ? " - " : result[key];
       }
+
+      this.name = result.name;
+      this.user_name = result.login;
+      this.location = result.location;
+      this.email = result.email;
+      this.bio = result.bio;
+      this.avatar_url = result.avatar_url;
+      this.followers = result.followers;
+      this.following = result.following;
+      this.public_repos = result.public_repos;
+      this.html_url = result.html_url;
+      this.repos_url = apiUrlRepos;
+      this.followers_url = apiUrlFollowers;
+      this.following_url = apiUrlFollowing;
     } catch (error) {
       console.log(error);
     }
