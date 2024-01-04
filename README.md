@@ -3,7 +3,7 @@ Sistema de busca de usuários github desenvolvido usando Webpack, a arquitetura 
 
 Digitar o nome de usuário do github na barra de pesquisa para ver a conta.
 
-## https://ghsearcher.netlify.app
+## ghsearcher.netlify.app
 
 ## Screenshots
 <div>
